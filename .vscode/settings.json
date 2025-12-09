@@ -1,4 +1,5 @@
 {
-  "phpserver.phpPath": "C:\\wamp64\\bin\\php\\php8.4.0",
-  "phpserver.port": 3000
+  "phpserver.port": 3000,
+  "phpserver.ip": "0.0.0.0",
+  "php.validate.executablePath": "C:/wamp64/bin/php/php8.4.0/php.exe"
 }
