@@ -23,6 +23,7 @@ function checkCredentials() {
         redirect: "follow"
     };
 
+    // eslint-disable-next-line no-undef
     fetch(apiUrl+"login", requestOptions)
     .then((response) => {
         if(response.ok){
@@ -36,8 +37,10 @@ function checkCredentials() {
     })
     .then((result) => {
         const token = result.apiToken;
+        // eslint-disable-next-line no-undef
         setToken(token);
 
+        // eslint-disable-next-line no-undef
         setCookie(RoleCookieName, result.roles[0], 7);
         window.location.replace("/");
     })

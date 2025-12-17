@@ -1,6 +1,7 @@
 const tokenCookieName = "accesstoken";
 const RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
+// eslint-disable-next-line no-unused-vars
 const apiUrl = "http://127.0.0.1:8000/api/";
 signoutBtn.addEventListener("click", signout);
 function getRole() {
@@ -13,6 +14,7 @@ function signout(){
     window.location.reload();
 }
 
+// eslint-disable-next-line no-unused-vars
 function setToken(token){
     setCookie(tokenCookieName, token, 7);
 }
@@ -65,6 +67,7 @@ function isConnected(){
  * admin
  * client
  */
+// eslint-disable-next-line no-unused-vars
 function showAndHideElementsForRoles(){
     const userConnected = isConnected();
     const role = getRole();
@@ -95,4 +98,10 @@ function showAndHideElementsForRoles(){
                 break;
         }
     })
+}
+
+function sanitizeHtml(text){
+    const tempHtml = document.createElement('div');
+    tempHtml.textContent = text;
+    return tempHtml.innerHTML;
 }
