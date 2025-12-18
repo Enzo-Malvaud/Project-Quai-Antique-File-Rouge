@@ -1,7 +1,7 @@
 const tokenCookieName = "accesstoken";
 const RoleCookieName = "role";
 const signoutBtn = document.getElementById("signout-btn");
-// eslint-disable-next-line no-unused-vars
+//url à modifier avec l'api déployer
 const apiUrl = "http://127.0.0.1:8000/api/";
 signoutBtn.addEventListener("click", signout);
 function getRole() {
@@ -14,7 +14,6 @@ function signout(){
     window.location.reload();
 }
 
-// eslint-disable-next-line no-unused-vars
 function setToken(token){
     setCookie(tokenCookieName, token, 7);
 }
@@ -67,7 +66,7 @@ function isConnected(){
  * admin
  * client
  */
-// eslint-disable-next-line no-unused-vars
+
 function showAndHideElementsForRoles(){
     const userConnected = isConnected();
     const role = getRole();
